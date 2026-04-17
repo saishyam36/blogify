@@ -1,8 +1,10 @@
-import { getSortedPostsData } from "@/lib/posts";
+import { getPostsMeta } from "@/lib/posts";
 import ListItem from "./ListItem";
 
-export default function Posts() {
-  const posts = getSortedPostsData();
+export default async function Posts() {
+  const posts = await getPostsMeta();
+
+  if (!posts) return <p className="mt-10 text-center text-zinc-500 dark:text-zinc-400">No posts found.</p>
 
   return (
     <section className="w-full max-w-2xl mx-auto mt-10 px-4">
