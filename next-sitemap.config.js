@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL || "https://blogify.vercel.app",
+  siteUrl: process.env.SITE_URL || "https://blogify-shyam.vercel.app/",
   generateRobotsTxt: true,
   sitemapSize: 5000,
   changefreq: "weekly",
